@@ -1,0 +1,402 @@
+[
+  {
+    "input": "Reply to this Instagram comment: Always killing it!",
+    "output": "Hearing this makes all the effort worthwhile. Thanks!"
+  },
+  {
+    "input": "Reply to this Instagram comment: I aspire to this level",
+    "output": "We're blushing! Thank you so much for the kind words."
+  },
+  {
+    "input": "Reply to this Instagram comment: How do I contact customer support?",
+    "output": "Hi there! Please send us a DM and we'd be happy to help with your inquiry."
+  },
+  {
+    "input": "Reply to this Instagram comment: Hey can we work together?",
+    "output": "Hello! Thanks for being active in our community."
+  },
+  {
+    "input": "Reply to this Instagram comment: Where is this manufactured?",
+    "output": "Hello! Feel free to DM us if you need help finding the right option."
+  },
+  {
+    "input": "Reply to this Instagram comment: My favorite page!",
+    "output": "Thanks for the compliment! We always try our best."
+  },
+  {
+    "input": "Reply to this Instagram comment: So inspiring!",
+    "output": "So glad this resonated with you! Thanks for sharing."
+  },
+  {
+    "input": "Reply to this Instagram comment: How long does delivery take?",
+    "output": "Hi! We'd love to help. Send us a direct message with your specific question."
+  },
+  {
+    "input": "Reply to this Instagram comment: Is free shipping available?",
+    "output": "Hello! Please check our website for the most current availability and details."
+  },
+  {
+    "input": "Reply to this Instagram comment: Pure perfection",
+    "output": "Your support fuels us to keep creating. Thank you!"
+  },
+  {
+    "input": "Reply to this Instagram comment: When is the next drop?",
+    "output": "Hi! Yes, we'd be happy to assist. Please reach out via DM for personalized help."
+  },
+  {
+    "input": "Reply to this Instagram comment: I regret buying this",
+    "output": "We apologize for falling short. Please send us a DM and we'll get this sorted out promptly."
+  },
+  {
+    "input": "Reply to this Instagram comment: Is this handmade?",
+    "output": "Thanks for asking! You'll find the answer on our FAQ page. Link in our bio."
+  },
+  {
+    "input": "Reply to this Instagram comment: Perfect",
+    "output": "We appreciate you!"
+  },
+  {
+    "input": "Reply to this Instagram comment: 🤩",
+    "output": "Right back at you! Thanks!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Chef's kiss 🤌",
+    "output": "So glad you like it! More great content is on the way."
+  },
+  {
+    "input": "Reply to this Instagram comment: Never shopping here again",
+    "output": "This is not the experience we want for our customers. Please DM us — we'll make it right."
+  },
+  {
+    "input": "Reply to this Instagram comment: I'd love to work with your brand",
+    "output": "Thanks for being here! Our community means everything to us."
+  },
+  {
+    "input": "Reply to this Instagram comment: L4L? F4F?",
+    "output": "Hello! Thanks for the kind energy. Have a great day!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Dope",
+    "output": "Thank you!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Would love a shoutout 🙏",
+    "output": "Hi there! We appreciate the comment and support."
+  },
+  {
+    "input": "Reply to this Instagram comment: Would love a shoutout 🙏",
+    "output": "Hi! Thanks for engaging. We love connecting with our followers!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Wow this is everything",
+    "output": "Thanks for the love! So glad you enjoyed it. 😊"
+  },
+  {
+    "input": "Reply to this Instagram comment: 🤩",
+    "output": "Appreciate the love!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Do you ship internationally?",
+    "output": "Hi there! We'd love to help you out. Please DM us your question!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Love",
+    "output": "Cheers! Thanks for the love."
+  },
+  {
+    "input": "Reply to this Instagram comment: Check out my latest post",
+    "output": "Hello there! Thanks for engaging with our post."
+  },
+  {
+    "input": "Reply to this Instagram comment: What's the difference between the two versions?",
+    "output": "Thanks for your interest! We're happy to help — just send us a DM. 😊"
+  },
+  {
+    "input": "Reply to this Instagram comment: Terrible communication from your team",
+    "output": "We're sorry you had a negative experience. Please contact our support team via DM so we can help."
+  },
+  {
+    "input": "Reply to this Instagram comment: First!",
+    "output": "Hope you're having a good one!"
+  },
+  {
+    "input": "Reply to this Instagram comment: 🫶",
+    "output": "Thanks for being here!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Support each other?",
+    "output": "Hi! Thank you for showing interest. We appreciate the engagement!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Very misleading product description",
+    "output": "We apologize for the delay and any trouble caused. Please send us a DM with your order info."
+  },
+  {
+    "input": "Reply to this Instagram comment: This is goals",
+    "output": "We appreciate you! Thanks for being part of our community."
+  },
+  {
+    "input": "Reply to this Instagram comment: What sizes do you have?",
+    "output": "Hi! We offer a variety of options on our site. Browse via the link in our bio."
+  },
+  {
+    "input": "Reply to this Instagram comment: Please follow me back",
+    "output": "We appreciate the interest! Thanks for being part of our journey."
+  },
+  {
+    "input": "Reply to this Instagram comment: Tag me!",
+    "output": "Hello! Thanks for being active in our community."
+  },
+  {
+    "input": "Reply to this Instagram comment: Check your DMs please",
+    "output": "Hi! Thanks for the comment, we appreciate it."
+  },
+  {
+    "input": "Reply to this Instagram comment: What are the dimensions?",
+    "output": "Hi there! All product details including sizing are on our website."
+  },
+  {
+    "input": "Reply to this Instagram comment: Is this true to size?",
+    "output": "Great question! Please DM us and our team will get back to you right away."
+  },
+  {
+    "input": "Reply to this Instagram comment: ❤️",
+    "output": "Appreciate the love!"
+  },
+  {
+    "input": "Reply to this Instagram comment: I shared this with everyone I know",
+    "output": "You're too kind! Thanks for the support."
+  },
+  {
+    "input": "Reply to this Instagram comment: Check out my latest post",
+    "output": "Thanks for reaching out! We appreciate you engaging with our content."
+  },
+  {
+    "input": "Reply to this Instagram comment: The quality doesn't match the price",
+    "output": "Apologies for the inconvenience caused. Let us help you resolve this via direct message."
+  },
+  {
+    "input": "Reply to this Instagram comment: You never disappoint!",
+    "output": "We appreciate you! Thanks for being part of our community."
+  },
+  {
+    "input": "Reply to this Instagram comment: Can you ship to Europe?",
+    "output": "Hi there! We'd love to help you out. Please DM us your question!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Why is every post so good?",
+    "output": "Thank you! Stay tuned for more content like this."
+  },
+  {
+    "input": "Reply to this Instagram comment: 10/10",
+    "output": "Appreciate it!"
+  },
+  {
+    "input": "Reply to this Instagram comment: The color looks different from the photo",
+    "output": "We completely understand your frustration. Please DM us and we'll prioritize your case."
+  },
+  {
+    "input": "Reply to this Instagram comment: Smooth",
+    "output": "Thanks for the support!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Hit me up for collab!",
+    "output": "Hi! Thanks for engaging. We love connecting with our followers!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Yes!!",
+    "output": "Thank you!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Shoutout?",
+    "output": "Hello! Thanks for being active in our community."
+  },
+  {
+    "input": "Reply to this Instagram comment: How do I order?",
+    "output": "Hi there! You can purchase directly through our website linked in our bio."
+  },
+  {
+    "input": "Reply to this Instagram comment: How many are left in stock?",
+    "output": "Hi! We offer a variety of options on our site. Browse via the link in our bio."
+  },
+  {
+    "input": "Reply to this Instagram comment: Is free shipping available?",
+    "output": "Hello! Our customer service team can assist you. Please send us a DM!"
+  },
+  {
+    "input": "Reply to this Instagram comment: I just followed you, follow back?",
+    "output": "Hello! Thanks for the kind energy. Have a great day!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Not worth the money at all",
+    "output": "We're sorry for the frustration. Our team is here to help — please message us directly with your details."
+  },
+  {
+    "input": "Reply to this Instagram comment: This made my day",
+    "output": "So happy to hear that! Thanks for stopping by."
+  },
+  {
+    "input": "Reply to this Instagram comment: How do I place a bulk order?",
+    "output": "Hi! Our team would love to assist you. Drop us a message anytime!"
+  },
+  {
+    "input": "Reply to this Instagram comment: I live for your posts",
+    "output": "So glad you like it! More great content is on the way."
+  },
+  {
+    "input": "Reply to this Instagram comment: What's the weight of this item?",
+    "output": "Great question! All the details are on our product page. Link in bio!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Looking for brand ambassadors?",
+    "output": "Thanks for your support! We love our engaged community."
+  },
+  {
+    "input": "Reply to this Instagram comment: I've been trying to reach support for days",
+    "output": "We apologize that this didn't meet your expectations. Please reach out via DM so we can assist you."
+  },
+  {
+    "input": "Reply to this Instagram comment: Great",
+    "output": "Thanks for commenting!"
+  },
+  {
+    "input": "Reply to this Instagram comment: I screenshot this for inspo",
+    "output": "We're blushing! Thank you so much for the kind words."
+  },
+  {
+    "input": "Reply to this Instagram comment: Had to return it immediately",
+    "output": "We're sorry to hear this. We take this seriously and would like to help if you message us."
+  },
+  {
+    "input": "Reply to this Instagram comment: Share for share?",
+    "output": "Thanks for your support! We love our engaged community."
+  },
+  {
+    "input": "Reply to this Instagram comment: What's the weight of this item?",
+    "output": "Hi there! We'd love to help you out. Please DM us your question!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Check your DMs please",
+    "output": "Thanks for reaching out! We appreciate you engaging with our content."
+  },
+  {
+    "input": "Reply to this Instagram comment: What's the return policy?",
+    "output": "Great question! Please DM us and our team will get back to you right away."
+  },
+  {
+    "input": "Reply to this Instagram comment: How long does delivery take?",
+    "output": "Hello! For the most up-to-date info, please visit our website. Link in bio!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Any promo codes available?",
+    "output": "Hello! Please check our website for the most current availability and details."
+  },
+  {
+    "input": "Reply to this Instagram comment: 💕",
+    "output": "Appreciate it!"
+  },
+  {
+    "input": "Reply to this Instagram comment: How long does shipping take?",
+    "output": "Thanks for your interest! We're happy to help — just send us a DM. 😊"
+  },
+  {
+    "input": "Reply to this Instagram comment: How do I contact customer support?",
+    "output": "Great question! Our FAQ covers this in detail. Check the link in our bio."
+  },
+  {
+    "input": "Reply to this Instagram comment: This just made my morning",
+    "output": "So happy to hear that! Thanks for stopping by."
+  },
+  {
+    "input": "Reply to this Instagram comment: Quality could be better",
+    "output": "We hear you and we're sorry. Customer satisfaction is our top priority. Please DM us so we can help."
+  },
+  {
+    "input": "Reply to this Instagram comment: Got the wrong item entirely",
+    "output": "We're very sorry about this. Please reach out to us directly so we can resolve this as soon as possible."
+  },
+  {
+    "input": "Reply to this Instagram comment: Terrible communication from your team",
+    "output": "We apologize for the delay and any trouble caused. Please send us a DM with your order info."
+  },
+  {
+    "input": "Reply to this Instagram comment: When will this restock?",
+    "output": "Hello! Please check our website for the most current availability and details."
+  },
+  {
+    "input": "Reply to this Instagram comment: Do you do gift wrapping?",
+    "output": "Hi there! We'd love to help you out. Please DM us your question!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Can you repost my content?",
+    "output": "Thanks for stopping by! Hope you're having a great day."
+  },
+  {
+    "input": "Reply to this Instagram comment: How long does shipping take?",
+    "output": "Hello! All details are available on our website. Feel free to check it out!"
+  },
+  {
+    "input": "Reply to this Instagram comment: You're the best!",
+    "output": "Thank you! Stay tuned for more content like this."
+  },
+  {
+    "input": "Reply to this Instagram comment: Absolutely stunning",
+    "output": "Thank you! Stay tuned for more content like this."
+  },
+  {
+    "input": "Reply to this Instagram comment: Hey can we work together?",
+    "output": "Hi! Thank you for showing interest. We appreciate the engagement!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Asked for a refund but no response",
+    "output": "This is not the experience we want for our customers. Please DM us — we'll make it right."
+  },
+  {
+    "input": "Reply to this Instagram comment: Always killing it!",
+    "output": "So glad this resonated with you! Thanks for sharing."
+  },
+  {
+    "input": "Reply to this Instagram comment: Check my page",
+    "output": "Thanks for your support! We love our engaged community."
+  },
+  {
+    "input": "Reply to this Instagram comment: What's the price?",
+    "output": "Hello! Feel free to DM us if you need help finding the right option."
+  },
+  {
+    "input": "Reply to this Instagram comment: Great",
+    "output": "Thanks! More to come!"
+  },
+  {
+    "input": "Reply to this Instagram comment: 💯",
+    "output": "Thanks for being here!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Clean",
+    "output": "Thank you for the support! 😊"
+  },
+  {
+    "input": "Reply to this Instagram comment: I screenshot this for inspo",
+    "output": "Hearing this makes all the effort worthwhile. Thanks!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Do you ship internationally?",
+    "output": "Hello! Please check our website for the most current availability and details."
+  },
+  {
+    "input": "Reply to this Instagram comment: This made my day",
+    "output": "Thank you! Your support means the world to us."
+  },
+  {
+    "input": "Reply to this Instagram comment: Epic",
+    "output": "You're awesome! Thanks!"
+  },
+  {
+    "input": "Reply to this Instagram comment: Love this!",
+    "output": "We appreciate you! Thanks for being part of our community."
+  },
+  {
+    "input": "Reply to this Instagram comment: I've been trying to reach support for days",
+    "output": "Thank you for letting us know. We want to fix this for you. Please reach out via DM with your details."
+  }
+]

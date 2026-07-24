@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaReply AI — Web Dashboard</title>
+    
+    <!-- Premium Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            /* Sleek Dark Mode (Default) */
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #6366f1;
+            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            --accent: #10b981;
+            --input-bg: rgba(15, 23, 42, 0.6);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        [data-theme="light"] {
+            /* Vibrant Light Mode */
+            --bg-gradient: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            --card-bg: rgba(255, 255, 255, 0.8);
+            --card-border: rgba(0, 0, 0, 0.06);
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --primary: #4f46e5;
+            --primary-gradient: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
+            --accent: #059669;
+            --input-bg: rgba(255, 255, 255, 0.9);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Glassmorphism Wrapper */
+        .app-container {
+            width: 100%;
+            max-width: 1100px;
+            padding: 40px 20px;
+            margin: auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .bot-avatar {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-gradient);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 22px;
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .status-badge {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 5px;
+            width: fit-content;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px var(--accent);
+        }
+
+        /* Controls / Theme Toggle */
+        .controls {
+            display: flex;
+            gap: 15px;
+        }
+
+        .theme-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            box-shadow: var(--glass-shadow);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .theme-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Main Glass Cards Grid */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 850px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .glass-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: var(--glass-shadow);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Textarea input styles */
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            background: var(--input-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 20px;
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 15px;
+            resize: none;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+        }
+
+        .char-counter {
+            position: absolute;
+            bottom: 12px;
+            right: 15px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Button Gradient Styling */
+        .btn-generate {
+            width: 100%;
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-generate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
+        }
+
+        .btn-generate:active {
+            transform: translateY(1px);
+        }
+
+        .btn-generate:disabled {
+            background: #475569;
+            color: #94a3b8;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Suggestion Output Area */
+        .output-wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .output-box {
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px dashed var(--card-border);
+            border-radius: 16px;
+            padding: 25px;
+            min-height: 170px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .placeholder-text {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        .reply-text {
+            color: var(--text-main);
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            display: none;
+        }
+
+        .meta-stats {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+        /* Action Buttons */
+        .action-bar {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-action {
+            flex: 1;
+            background: var(--input-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            border-radius: 12px;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn-action:hover {
+            background: rgba(99, 102, 241, 0.15);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .btn-action:active {
+            transform: translateY(1px);
+        }
+
+        /* History Panel */
+        .history-card {
+            margin-top: 30px;
+        }
+
+        .history-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .btn-clear-history {
+            background: transparent;
+            border: none;
+            color: #ef4444;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-clear-history:hover {
+            text-decoration: underline;
+        }
+
+        .history-list {
+            max-height: 300px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding-right: 5px;
+        }
+
+        /* Custom Scrollbar */
+        .history-list::-webkit-scrollbar {
+            width: 6px;
+        }
+        .history-list::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .history-list::-webkit-scrollbar-thumb {
+            background: var(--card-border);
+            border-radius: 3px;
+        }
+
+        .history-item {
+            background: rgba(15, 23, 42, 0.3);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 18px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .history-comment {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-muted);
+            border-left: 3px solid var(--primary);
+            padding-left: 10px;
+            margin: 0;
+        }
+
+        .history-reply {
+            font-size: 14px;
+            color: var(--text-main);
+            margin: 0;
+            padding-left: 13px;
+        }
+
+        .btn-delete-item {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 14px;
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+        .btn-delete-item:hover {
+            color: #ef4444;
+            background: rgba(239, 68, 68, 0.1);
+        }
+
+        .empty-history {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+            padding: 30px;
+        }
+
+        /* Dynamic Loading Spinners */
+        .loader {
+            display: none;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body data-theme="dark">
+
+    <div class="app-container">
+        
+        <!-- Header -->
+        <header>
+            <div class="logo-section">
+                <div class="bot-avatar">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div>
+                    <h1>InstaReply AI</h1>
+                    <div class="status-badge">
+                        <span class="status-dot"></span> Local Server Online
+                    </div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button class="theme-btn" onclick="toggleTheme()" title="Toggle Theme">
+                    <i id="theme-icon" class="fa-solid fa-sun"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Workspace -->
+        <div class="grid-layout">
+            
+            <!-- Input Card -->
+            <div class="glass-card">
+                <h2><i class="fa-solid fa-pen-nib" style="color: var(--primary)"></i> Input Comment</h2>
+                
+                <div class="input-group">
+                    <textarea id="comment-input" placeholder="Paste an Instagram comment here..." oninput="updateCounter()"></textarea>
+                    <div class="char-counter"><span id="char-count">0</span> characters</div>
+                </div>
+
+                <button class="btn-generate" id="btn-generate" onclick="generateReply()">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Suggested Reply
+                </button>
+            </div>
+
+            <!-- Output Card -->
+            <div class="glass-card">
+                <div class="output-wrapper">
+                    <div>
+                        <h2><i class="fa-solid fa-quote-left" style="color: var(--accent)"></i> Suggested Reply</h2>
+                        
+                        <div class="output-box">
+                            <div class="loader" id="loader"></div>
+                            
+                            <div class="placeholder-text" id="placeholder">
+                                <i class="fa-solid fa-robot" style="font-size: 32px; color: var(--text-muted); display: block; margin-bottom: 12px;"></i>
+                                Suggestions will appear here after clicking generate.
+                            </div>
+                            
+                            <p class="reply-text" id="reply-text"></p>
+                        </div>
+                        
+                        <div id="meta-stats" class="meta-stats" style="display: none;">
+                            <span><i class="fa-solid fa-clock"></i> Generated in <span id="gen-time">0.0s</span></span>
+                        </div>
+                    </div>
+
+                    <div class="action-bar">
+                        <button class="btn-action" onclick="copyReply()"><i class="fa-regular fa-copy"></i> Copy</button>
+                        <button class="btn-action" onclick="clearInput()"><i class="fa-solid fa-eraser"></i> Clear</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- History Card -->
+        <div class="glass-card history-card">
+            <div class="history-header">
+                <h2><i class="fa-solid fa-history" style="color: var(--primary)"></i> Generation History</h2>
+                <button class="btn-clear-history" onclick="clearHistory()"><i class="fa-solid fa-trash-can"></i> Clear All</button>
+            </div>
+
+            <div class="history-list" id="history-list">
+                <!-- Stored items will be injected here -->
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // ── Theme Switcher ──
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById("theme-icon");
+            if (body.getAttribute("data-theme") === "dark") {
+                body.setAttribute("data-theme", "light");
+                themeIcon.className = "fa-solid fa-moon";
+            } else {
+                body.setAttribute("data-theme", "dark");
+                themeIcon.className = "fa-solid fa-sun";
+            }
+        }
+
+        // ── Input Helper ──
+        function updateCounter() {
+            const text = document.getElementById("comment-input").value;
+            document.getElementById("char-count").innerText = text.length;
+        }
+
+        function clearInput() {
+            document.getElementById("comment-input").value = "";
+            document.getElementById("char-count").innerText = 0;
+            document.getElementById("placeholder").style.display = "block";
+            document.getElementById("reply-text").style.display = "none";
+            document.getElementById("meta-stats").style.display = "none";
+        }
+
+        // ── Copy Helper ──
+        function copyReply() {
+            const text = document.getElementById("reply-text").innerText;
+            if (!text) return;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const copyBtn = document.querySelector(".btn-action i.fa-copy");
+                const parent = copyBtn.parentElement;
+                
+                parent.innerHTML = '<i class="fa-solid fa-check" style="color: var(--accent)"></i> Copied!';
+                setTimeout(() => {
+                    parent.innerHTML = '<i class="fa-regular fa-copy"></i> Copy';
+                }, 1500);
+            });
+        }
+
+        // ── Generation Logic ──
+        async function generateReply() {
+            const comment = document.getElementById("comment-input").value.trim();
+            if (!comment) return alert("Please enter a comment first!");
+
+            const loader = document.getElementById("loader");
+            const placeholder = document.getElementById("placeholder");
+            const replyText = document.getElementById("reply-text");
+            const metaStats = document.getElementById("meta-stats");
+            const genBtn = document.getElementById("btn-generate");
+
+            // UI State loading
+            placeholder.style.display = "none";
+            replyText.style.display = "none";
+            metaStats.style.display = "none";
+            loader.style.display = "block";
+            genBtn.disabled = true;
+
+            try {
+                const response = await fetch("/api/reply", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ comment: comment })
+                });
+
+                if (!response.ok) throw new Error("HTTP error " + response.status);
+
+                const data = await response.json();
+                
+                // Update UI with response
+                replyText.innerText = data.reply;
+                document.getElementById("gen-time").innerText = data.elapsed.toFixed(2) + "s";
+                
+                loader.style.display = "none";
+                replyText.style.display = "block";
+                metaStats.style.display = "flex";
+
+                // Save to history
+                saveToHistory(comment, data.reply);
+                
+            } catch (err) {
+                loader.style.display = "none";
+                placeholder.style.display = "block";
+                alert("Error calling server. Make sure your FastAPI backend is running! Details: " + err.message);
+            } finally {
+                genBtn.disabled = false;
+            }
+        }
+
+        // ── History Management ──
+        function saveToHistory(comment, reply) {
+            let history = JSON.parse(localStorage.getItem("replyHistory") || "[]");
+            // Add new item to front
+            history.unshift({ comment, reply, id: Date.now() });
+            // Cap at 15 items
+            if (history.length > 15) history.pop();
+            localStorage.setItem("replyHistory", JSON.stringify(history));
+            renderHistory();
+        }
+
+        function deleteHistoryItem(id) {
+            let history = JSON.parse(localStorage.getItem("replyHistory") || "[]");
+            history = history.filter(item => item.id !== id);
+            localStorage.setItem("replyHistory", JSON.stringify(history));
+            renderHistory();
+        }
+
+        function clearHistory() {
+            if (confirm("Are you sure you want to clear the entire history log?")) {
+                localStorage.setItem("replyHistory", "[]");
+                renderHistory();
+            }
+        }
+
+        function renderHistory() {
+            const list = document.getElementById("history-list");
+            const history = JSON.parse(localStorage.getItem("replyHistory") || "[]");
+            
+            if (history.length === 0) {
+                list.innerHTML = '<div class="empty-history"><i class="fa-solid fa-folder-open" style="font-size: 24px; display:block; margin-bottom:10px;"></i>No history logged yet.</div>';
+                return;
+            }
+
+            list.innerHTML = history.map(item => `
+                <div class="history-item">
+                    <p class="history-comment"><i class="fa-solid fa-arrow-right"></i> ${escapeHtml(item.comment)}</p>
+                    <p class="history-reply"><i class="fa-solid fa-reply"></i> ${escapeHtml(item.reply)}</p>
+                    <button class="btn-delete-item" onclick="deleteHistoryItem(${item.id})" title="Delete item">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function escapeHtml(text) {
+            return text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        // Initialize on page load
+        renderHistory();
+    </script>
+</body>
+</html>
