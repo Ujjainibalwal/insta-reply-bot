@@ -1,6 +1,10 @@
 # 🤖 InstaReply Bot
 
-A locally fine-tuned AI chatbot that generates professional replies to Instagram-style social media comments. Runs entirely on your machine — no APIs, no cloud services, no costs.
+A fine-tuned AI chatbot that generates professional replies to Instagram-style social media comments. 
+
+🚀 **Live Web App**: [insta-reply-bot.streamlit.app](https://insta-reply-bot-byzf6nmx2yudkiwgzyncyc.streamlit.app/)
+
+Runs entirely on your machine locally or online via free cloud hosting — no APIs, no cloud costs.
 
 **Model**: FLAN-T5-Small (~77M parameters, ~300 MB on disk)  
 **Training**: CPU-only, ~30–60 minutes  
