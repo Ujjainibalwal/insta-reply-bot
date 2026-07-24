@@ -94,11 +94,15 @@ if __name__ == "__main__":
     import torch
     torch.set_num_threads(2)
     
+    import os
+    port = int(os.environ.get("PORT", 7860 if os.environ.get("SPACE_ID") else 8000))
+    host = "0.0.0.0" if os.environ.get("SPACE_ID") else "127.0.0.1"
+
     print()
-    print("  🌐 Starting web dashboard at: http://localhost:8000")
+    print(f"  🌐 Starting web dashboard at: http://{host}:{port}")
     print("  Press Ctrl+C to stop the server.")
     print("━" * 60)
     print()
     
-    # Run the server locally on port 8000
-    uvicorn.run(app, host="127.0.0.1", port=8000, log_level="warning")
+    # Run the server on the determined host and port
+    uvicorn.run(app, host=host, port=port, log_level="warning")
