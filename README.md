@@ -108,12 +108,6 @@ insta-reply-bot/
 
 ---
 
-## Requirements
-
-- **Python**: 3.9+
-- **RAM**: 8 GB minimum (16 GB recommended for training)
-- **Disk**: ~1 GB (for model + dependencies)
-- **GPU**: Not required — runs entirely on CPU
 
 ---
 
